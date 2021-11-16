@@ -11,50 +11,70 @@
 
 
 // L’utente sceglie pari o dispari
-const userPariDispari = prompt('scegli pari o dispari');
+// const userPariDispari = prompt('scegli pari o dispari');
 // inserisce un numero da 1 a 5
-const userRandomNumber = parseInt(prompt('scegli un numero da 1 a 5'));
-console.log('il numero scelto dall utente è: ' + userRandomNumber);
+// const userRandomNumber = parseInt(prompt('scegli un numero da 1 a 5'));
+// console.log('il numero scelto dall utente è: ' + userRandomNumber);
 
 
 //  numero random usando una funzione
-function randomNumber (min, max) {
-    return Math.floor(Math.random() *(max - min))+ min ;
-}
+// function randomNumber (min, max) {
+//     return Math.floor(Math.random() *(max - min))+ min ;
+// }
 
 // numero random computer
-const pcRandomNumber = randomNumber(1,5);
-console.log('il numero del pc è: ' + pcRandomNumber);
+// const pcRandomNumber = randomNumber(1,5);
+// console.log('il numero del pc è: ' + pcRandomNumber);
 
 
 // Sommiamo i due numeri
-const somma = userRandomNumber + pcRandomNumber;
-console.log('la somma è ' + somma);
+// const somma = userRandomNumber + pcRandomNumber;
+// console.log('la somma è ' + somma);
 
 
 // stabiliamo se è pari o dispari usando una funzione
-function pariDispariFun (number) {
-    if (number % 2 == 0) {
-        return true;
-    }
-    return false;
-}
+// function pariDispariFun (number) {
+//     if (number % 2 == 0) {
+//         return true;
+//     }
+//     return false;
+// }
 
-const isPari = pariDispariFun(somma);
+// const isPari = pariDispariFun(somma);
 
 
 // stabiliamo il vincitore
-if  ((isPari && userPariDispari == 'pari') 
-    || 
-    (isPari == false && userPariDispari == 'dispari')) {
-    console.log('hai vinto!');
+// if  ((isPari && userPariDispari == 'pari') 
+//     || 
+//     (isPari == false && userPariDispari == 'dispari')) {
+//     console.log('hai vinto!');
+// } else {
+//     console.log('hai perso!');
+// }
+
+
+
+
+
+
+// ESERCIZIO PAROLA PALINDROMA
+
+// chiedo all'utente di inserire una parola
+let userWord = prompt('scrivi una parola');
+
+// creo una funzione che divide le lettere in un Array, le inverte e le unisce al contrario
+function reverseWordFun(str){
+    let word = str.split('').reverse().join('');  
+    return word;
+}
+
+let reverseWord = reverseWordFun(userWord);
+
+// // verifico se la parola è palindroma
+if (userWord == reverseWord) {
+    console.log('la parola inserita è palindroma');
 } else {
-    console.log('hai perso!');
+    console.log('la parola inserita non è palindroma');
 }
 
 
-
-
-
-
-// ESERCIZIO PALIDROMA
