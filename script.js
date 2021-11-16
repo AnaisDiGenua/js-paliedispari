@@ -7,6 +7,9 @@
 
 
 
+// ESERCIZIO PARI O DISPARI
+
+
 // L’utente sceglie pari o dispari
 const userPariDispari = prompt('scegli pari o dispari');
 // inserisce un numero da 1 a 5
@@ -37,27 +40,21 @@ function pariDispariFun (number) {
     return false;
 }
 
-// Dichiariamo chi ha vinto
-const vincitore = pariDispariFun(somma);
+const isPari = pariDispariFun(somma);
 
 
-
-
-
-// *********SOLUZIONE CON DUE CONDIZIONI SENZA OR*****************
-// if (vincitore && userPariDispari == 'pari') {
-//     console.log('hai vinto!');
-// } else if (vincitore == false && userPariDispari == 'dispari') {
-//     console.log('hai vinto');
-// } else {
-//     console.log('hai perso!');
-// }
-
-
-
-// ************SOLUZIONE CON OR******************************
-if (vincitore && userPariDispari == 'pari' || vincitore == false && userPariDispari == 'dispari') {
+// stabiliamo il vincitore
+if  ((isPari && userPariDispari == 'pari') 
+    || 
+    (isPari == false && userPariDispari == 'dispari')) {
     console.log('hai vinto!');
 } else {
     console.log('hai perso!');
 }
+
+
+
+
+
+
+// ESERCIZIO PALIDROMA
